@@ -2,8 +2,7 @@
 <script setup lang="ts">
 import type { MaisonResponse } from '@/pocketbase-types'
 import MaisonCard from '@/components/MaisonCard.vue'
-import { allMaisonFavori, pb } from '@/backend'
-// const maisonsListe: MaisonResponse[] = await pb.collection('maison').getFullList()
+import { allMaisonFavori } from '@/backend'
 const maisonsListe = await allMaisonFavori()
 console.log(maisonsListe)
 
