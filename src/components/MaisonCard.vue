@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import type { MaisonResponse } from '@/pocketbase-types'
+import ImgPb from './ImgPb.vue'
+
 const props = defineProps<MaisonResponse>()
 </script>
+
 <template>
 <div
-  class="flex flex-col justify-start items-start flex-grow relative rounded-lg bg-white border-[1.5px] border-indigo-100"
+  class="m-10 w-[394.67px] flex flex-col justify-start items-start flex-grow relative rounded-lg bg-white border-[1.5px] border-indigo-100"
 >
   <div class="self-stretch flex-grow-0 flex-shrink-0 h-[200px]">
-    <div
+    <!-- <div
       class="w-[394.67px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
-    ></div>
-    <img
-      src=""
-      class="w-[394.67px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover"
-    />
+    ></div> -->
+    <ImgPb :record="props" :filename="image" :width="387" :height="235" class="h-[200px] w-[394.67px]" />
   </div>
   <div
     class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-5 py-[30px]"
