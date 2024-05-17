@@ -9,7 +9,21 @@ console.log(maisonsListe)
 </script>
 
 <template>
-  <h1 class="text-2xl">Bonjour monde !</h1>
+  <h1 class="text-2xl">Toutes les offres</h1>
 
-  <MaisonCard v-for="uneMaison in maisonsListe" :key="uneMaison.id" v-bind="uneMaison"/>
+  <ul>
+  <li v-for="uneMaison of maisonsListe" :v-key="uneMaison.id">
+    <RouterLink
+      :to="{
+        name: '/offres/[id]',
+        params: {
+          id: uneMaison.id
+        }
+      }"
+      class="text-red-400 hover:text-red-600"
+    >
+      {{ uneMaison.nomMaison }}
+    </RouterLink>
+  </li>
+</ul>
 </template>
