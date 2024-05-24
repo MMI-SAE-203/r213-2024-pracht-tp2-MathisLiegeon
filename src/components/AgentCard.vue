@@ -1,7 +1,14 @@
 <script setup lang="ts">
-import type { AgentResponse } from '@/pocketbase-types'
+import type { AgentResponse} from '@/pocketbase-types'
+import { pb } from '@/backend'
+import MaisonCard from '@/components/MaisonCard.vue'
 
 const props = defineProps<AgentResponse>()
+
+// {filter: `agentId = "${nom}"`, expand: 'agent'}
+
+
+
 </script>
 
 <template>
@@ -17,4 +24,5 @@ const props = defineProps<AgentResponse>()
         {{ eMail }}
         </span>
     </section>
+
 </template>
