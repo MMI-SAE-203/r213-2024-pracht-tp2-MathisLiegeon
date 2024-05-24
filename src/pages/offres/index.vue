@@ -17,7 +17,7 @@ console.log(maisonsListe)
       :to="{
         name: '/offres/[id]',
         params: {
-          id: uneMaison.id
+          id: uneMaison.id  
         }
       }"
       class="text-red-400 hover:text-red-600"

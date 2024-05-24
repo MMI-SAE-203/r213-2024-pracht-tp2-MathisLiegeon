@@ -4,7 +4,7 @@ import ImgPb from './ImgPb.vue'
 
 const props = defineProps<MaisonResponse>()
 </script>
-
+ 
 <template>
 <div
   class="m-10 w-[394.67px] flex flex-col justify-start items-start flex-grow relative rounded-lg bg-white border-[1.5px] border-indigo-100"
